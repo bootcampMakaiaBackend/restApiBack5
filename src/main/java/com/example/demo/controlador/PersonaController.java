@@ -40,4 +40,7 @@ public class PersonaController {
     public List<Persona> obtenerPersonaPorCiudad(@RequestParam("ciudad") String ciudad){
         return this.personaService.obtenerPersonaPorCiudad(ciudad);
     }
+
+    //crear un endpoint que me filtre por ciudad , edad de las personas
+    //crear un endpoint que eme limine por ciudad
 }
