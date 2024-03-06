@@ -1,11 +1,12 @@
 package com.example.demo.servicio;
 
 import com.example.demo.modelo.Persona;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
+@Service
 public class PersonaService {
 
     private List<Persona> personas;

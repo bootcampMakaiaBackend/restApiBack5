@@ -2,6 +2,7 @@ package com.example.demo.controlador;
 
 import com.example.demo.modelo.Persona;
 import com.example.demo.servicio.PersonaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,9 +12,13 @@ public class PersonaController {
 
     private PersonaService personaService;
 
-    public PersonaController() {
-        this.personaService = new PersonaService();
+    @Autowired
+    public PersonaController(PersonaService personaService) {
+        this.personaService = personaService;
     }
+
+//Inyectar las dependencias
+
 
     //localhost:8080/personas -> get
     @GetMapping("/personas/") //get
@@ -42,5 +47,5 @@ public class PersonaController {
     }
 
     //crear un endpoint que me filtre por ciudad , edad de las personas
-    //crear un endpoint que eme limine por ciudad
+    //crear un endpoint que  elimine por ciudad
 }
